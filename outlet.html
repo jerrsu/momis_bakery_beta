@@ -1,0 +1,457 @@
+<!doctype html>
+
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "on-surface": "#201b10",
+                            "on-primary-container": "#ffc29f",
+                            "tertiary-container": "#585a47",
+                            "surface-container-low": "#fef2e0",
+                            "primary-container": "#8b4513",
+                            secondary: "#775a00",
+                            primary: "#6c2f00",
+                            "surface-container-lowest": "#ffffff",
+                            "inverse-primary": "#ffb68c",
+                            "surface-container": "#f8ecda",
+                            "tertiary-fixed-dim": "#c8c8b0",
+                            "on-secondary-container": "#6f5400",
+                            "on-secondary-fixed-variant": "#5a4300",
+                            surface: "#fff8f2",
+                            "primary-fixed": "#ffdbc9",
+                            "on-error-container": "#93000a",
+                            tertiary: "#414231",
+                            "secondary-fixed": "#ffdf99",
+                            "surface-variant": "#ede1cf",
+                            outline: "#877369",
+                            "secondary-fixed-dim": "#f3bf32",
+                            "on-primary": "#ffffff",
+                            "error-container": "#ffdad6",
+                            "surface-dim": "#e4d9c7",
+                            "inverse-on-surface": "#fbefdd",
+                            "on-tertiary-container": "#d1d1b9",
+                            "on-primary-fixed": "#321200",
+                            "on-tertiary-fixed": "#1b1d0e",
+                            "on-secondary-fixed": "#251a00",
+                            "surface-tint": "#934b19",
+                            "surface-container-highest": "#ede1cf",
+                            "surface-bright": "#fff8f2",
+                            "on-secondary": "#ffffff",
+                            background: "#fff8f2",
+                            "tertiary-fixed": "#e4e4cc",
+                            "on-background": "#201b10",
+                            error: "#ba1a1a",
+                            "surface-container-high": "#f2e7d5",
+                            "inverse-surface": "#363024",
+                            "primary-fixed-dim": "#ffb68c",
+                            "on-tertiary": "#ffffff",
+                            "secondary-container": "#fdc73b",
+                            "on-surface-variant": "#54433a",
+                            "outline-variant": "#dac2b6",
+                            "on-primary-fixed-variant": "#753401",
+                            "on-tertiary-fixed-variant": "#474836",
+                            "on-error": "#ffffff",
+                        },
+                        fontFamily: {
+                            headline: ["Noto Serif"],
+                            body: ["Plus Jakarta Sans"],
+                            label: ["Plus Jakarta Sans"],
+                        },
+                        borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" },
+                    },
+                },
+            };
+        </script>
+        <style>
+            .material-symbols-outlined {
+                font-variation-settings:
+                    "FILL" 0,
+                    "wght" 400,
+                    "GRAD" 0,
+                    "opsz" 24;
+            }
+        </style>
+    </head>
+    <body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+        <!-- TopNavBar -->
+        <nav class="fixed top-0 w-full z-50 bg-orange-50/80 backdrop-blur-xl shadow-sm">
+            <div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+                <div class="text-2xl font-bold tracking-tight text-amber-900 font-headline">Momis Bakery</div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a class="text-stone-600 hover:text-amber-800 transition-colors" href="index.html">Home</a>
+                    <a class="text-stone-600 hover:text-amber-800 transition-colors" href="menu.html">Menu Favorit</a>
+                    <a class="text-amber-700 font-semibold border-b-2 border-amber-700 pb-1" href="outlet.html">Lokasi Cabang</a>
+                    <a class="text-stone-600 hover:text-amber-800 transition-colors" href="about.html">Tentang Kami</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <!-- <button
+                        class="hidden lg:block text-amber-900 font-semibold hover:scale-95 transition-transform duration-200">
+                        Pilih Cabang
+                    </button> -->
+                    <button
+                        class="bg-primary text-on-primary px-6 py-2 rounded-full font-semibold hover:scale-95 transition-transform duration-200 shadow-md">
+                        Pesan Sekarang
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <main class="pt-32 pb-40 px-6 max-w-7xl mx-auto">
+            <!-- Hero Section / Header -->
+            <header class="mb-16 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 bg-surface-container px-4 py-2 rounded-full mb-6">
+                    <span class="material-symbols-outlined text-primary text-sm">storefront</span>
+                    <span class="text-xs font-label uppercase tracking-widest font-bold text-on-surface-variant"
+                        >Jaringan Outlet Resmi</span
+                    >
+                </div>
+                <h1 class="font-headline text-5xl lg:text-7xl font-bold text-primary mb-6 leading-tight">
+                    Cari Kehangatan<br />Terdekat Anda
+                </h1>
+                <p class="text-lg text-on-surface-variant max-w-2xl font-serif italic">
+                    Nikmati roti artisan yang baru dipanggang dari 13+ cabang kami yang tersebar di wilayah Bandung dan
+                    sekitarnya.
+                </p>
+            </header>
+            <!-- Region Filter Chips (Editorial Style) -->
+            <div class="flex flex-wrap gap-4 mb-12">
+                <button
+                    class="bg-primary text-on-primary px-8 py-3 rounded-full font-medium shadow-lg hover:scale-95 transition-transform">
+                    Semua Wilayah
+                </button>
+                <button
+                    class="bg-surface-container text-on-surface-variant px-8 py-3 rounded-full font-medium hover:bg-surface-container-highest transition-colors">
+                    Bandung Tengah
+                </button>
+                <button
+                    class="bg-surface-container text-on-surface-variant px-8 py-3 rounded-full font-medium hover:bg-surface-container-highest transition-colors">
+                    Bandung Timur
+                </button>
+                <button
+                    class="bg-surface-container text-on-surface-variant px-8 py-3 rounded-full font-medium hover:bg-surface-container-highest transition-colors">
+                    Bandung Barat
+                </button>
+                <button
+                    class="bg-surface-container text-on-surface-variant px-8 py-3 rounded-full font-medium hover:bg-surface-container-highest transition-colors">
+                    Cimahi
+                </button>
+            </div>
+            <!-- Branch Bento Grid -->
+            <div class="space-y-24">
+                <!-- Region Section: Bandung Tengah -->
+                <section>
+                    <div class="flex items-end justify-between mb-8 border-b-0">
+                        <h2 class="font-headline text-3xl font-bold text-on-surface flex items-center gap-3">
+                            <span class="w-12 h-[2px] bg-primary-container rounded-full"></span>
+                            Bandung Tengah
+                        </h2>
+                        <span class="text-label text-sm text-outline font-medium tracking-widest uppercase"
+                            >5 Lokasi</span
+                        >
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Card 1 -->
+                        <div
+                            class="group relative bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col transition-all hover:-translate-y-2 duration-300">
+                            <div class="h-48 overflow-hidden">
+                                <img
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Warm cozy bakery interior with wooden shelves and freshly baked artisan breads in the center of Bandung city"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSufvjGAAmZJSsmZXvd_RGTjr_IkH7gLUMXs43WZy5XxcahKiaMN4Me_e-t9FDnZcAGvtpv0W-ndBmDriDhYrMedE7g7BhJbYZYG_Xa9-95sV7xWUQghQTTyGJCwcZRd6IxPY3EWO43K5vYy4mzozQRwGHhv0cuZ2MOtva3wr5JhYSil-yQ8KPX7s9DN123AvBtghmr0NhpyWNmNsHIU74bILRx5sC4XjqMg15mr5_GHy0hJtku46OHCGeSbnqtgbI9GoqcSAmTTE" />
+                                <div class="absolute top-4 left-4 flex gap-2">
+                                    <span
+                                        class="bg-emerald-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter flex items-center gap-1">
+                                        <span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span> BUKA
+                                        SEKARANG
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="p-8 flex flex-col flex-grow">
+                                <h3 class="font-headline text-2xl font-bold text-primary mb-2">Pusat Braga</h3>
+                                <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+                                    Jl. Braga No. 45, Sumur Bandung, Kota Bandung, Jawa Barat 40111
+                                </p>
+                                <div class="mt-auto space-y-3">
+                                    <a
+                                        class="flex items-center justify-between group/link bg-surface-container hover:bg-primary-container hover:text-on-primary-container p-4 rounded-xl transition-all"
+                                        href="#">
+                                        <div class="flex items-center gap-3">
+                                            <span
+                                                class="material-symbols-outlined text-primary group-hover/link:text-on-primary-container"
+                                                >map</span
+                                            >
+                                            <span class="font-semibold text-sm">Petunjuk Jalan</span>
+                                        </div>
+                                        <span
+                                            class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform"
+                                            >arrow_forward</span
+                                        >
+                                    </a>
+                                    <a
+                                        class="flex items-center justify-center gap-2 bg-[#25D366]/10 text-[#075E54] hover:bg-[#25D366] hover:text-white py-3 rounded-full font-bold text-sm transition-all"
+                                        href="#">
+                                        <span class="material-symbols-outlined text-sm">chat</span>
+                                        Chat Cabang Ini
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div
+                            class="group relative bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col transition-all hover:-translate-y-2 duration-300">
+                            <div class="h-48 overflow-hidden">
+                                <img
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Modern bakery storefront with glass windows and warm amber lighting showcasing pastries on a rainy afternoon"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkPAzFtP7CIEnAikjIJKV50vMXgcLOv8Q1u-e_mfxtvBN80rZDtQnpMruh5Qn7gzCVWOUY3Xu1B6GTX5CsfboEBd8VtFZBNWHo5eAK2b6D_Q_FE5B6lA1cApWSftANTgescdv2-G4c0jS5BpmFe2z7az_n870DikHm71Ent3y0y5uyK4vHK5gi9OXMFM15_bVpo82uGBpIsU71kFzkJDgJc6s_1jbeh1NceZgqbh9f1X0SaoftvOlaOYK9zd7m0gZkCWpP0zE-PFc" />
+                                <div class="absolute top-4 left-4 flex gap-2">
+                                    <span
+                                        class="bg-emerald-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter flex items-center gap-1">
+                                        <span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span> BUKA
+                                        SEKARANG
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="p-8 flex flex-col flex-grow">
+                                <h3 class="font-headline text-2xl font-bold text-primary mb-2">Dago Atas</h3>
+                                <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+                                    Jl. Ir. H. Juanda No. 120, Coblong, Kota Bandung, Jawa Barat 40132
+                                </p>
+                                <div class="mt-auto space-y-3">
+                                    <a
+                                        class="flex items-center justify-between group/link bg-surface-container hover:bg-primary-container hover:text-on-primary-container p-4 rounded-xl transition-all"
+                                        href="#">
+                                        <div class="flex items-center gap-3">
+                                            <span
+                                                class="material-symbols-outlined text-primary group-hover/link:text-on-primary-container"
+                                                >map</span
+                                            >
+                                            <span class="font-semibold text-sm">Petunjuk Jalan</span>
+                                        </div>
+                                        <span
+                                            class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform"
+                                            >arrow_forward</span
+                                        >
+                                    </a>
+                                    <a
+                                        class="flex items-center justify-center gap-2 bg-[#25D366]/10 text-[#075E54] hover:bg-[#25D366] hover:text-white py-3 rounded-full font-bold text-sm transition-all"
+                                        href="#">
+                                        <span class="material-symbols-outlined text-sm">chat</span>
+                                        Chat Cabang Ini
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div
+                            class="group relative bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col transition-all hover:-translate-y-2 duration-300 opacity-80 grayscale-[0.5]">
+                            <div class="h-48 overflow-hidden grayscale">
+                                <img
+                                    class="w-full h-full object-cover"
+                                    data-alt="Artisanal bakery kitchen during closing time with flour on tables and warm backlighting"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNQ0PUp4ulcvg-r0MIlm75tL5f2Qb8CO2zKAh6hqQscOk-lEJFo4veRFwOUwU3eObDayULlY5MFpo8tm9-kplwoToqGrvokpbRjfYEDGT01RyLlhqiWCYVCG0Tt8h7KFSHLtEhI8-P4Dz4sjkX8utRYBbOzZtiLo6l-2WkcsWId_YRrWfUw89LpnUvMBtr-MxURayj0AhmavmjTd0qVbWn3YFt0Gu-0_q6n1eBMJZ3RAMzsysYRrmP0t4YCOhska02P-Z_2ylJirM" />
+                                <div class="absolute inset-0 bg-black/20"></div>
+                                <div class="absolute top-4 left-4">
+                                    <span
+                                        class="bg-stone-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter"
+                                        >TUTUP</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="p-8 flex flex-col flex-grow">
+                                <h3 class="font-headline text-2xl font-bold text-primary mb-2">Cihampelas</h3>
+                                <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+                                    Jl. Cihampelas No. 160, Cipaganti, Kota Bandung, Jawa Barat 40131
+                                </p>
+                                <div class="mt-auto space-y-3">
+                                    <a
+                                        class="flex items-center justify-between group/link bg-surface-container-low cursor-not-allowed p-4 rounded-xl"
+                                        href="#">
+                                        <div class="flex items-center gap-3">
+                                            <span class="material-symbols-outlined text-outline">map</span>
+                                            <span class="font-semibold text-sm text-outline">Petunjuk Jalan</span>
+                                        </div>
+                                        <span class="material-symbols-outlined text-sm text-outline">lock</span>
+                                    </a>
+                                    <a
+                                        class="flex items-center justify-center gap-2 bg-surface-container text-outline py-3 rounded-full font-bold text-sm cursor-not-allowed"
+                                        href="#">
+                                        <span class="material-symbols-outlined text-sm">chat</span>
+                                        Buka Pukul 08:00
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Region Section: Cimahi -->
+                <section>
+                    <div class="flex items-end justify-between mb-8 border-b-0">
+                        <h2 class="font-headline text-3xl font-bold text-on-surface flex items-center gap-3">
+                            <span class="w-12 h-[2px] bg-primary-container rounded-full"></span>
+                            Cimahi
+                        </h2>
+                        <span class="text-label text-sm text-outline font-medium tracking-widest uppercase"
+                            >3 Lokasi</span
+                        >
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Cimahi Card -->
+                        <div
+                            class="group relative bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col transition-all hover:-translate-y-2 duration-300">
+                            <div class="h-48 overflow-hidden">
+                                <img
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Rustic bakery shelf with sourdough loaves and basket of croissants with bright airy morning light"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeVUjNkAzhhJ0cIsyxMU9NYS0g95KRLHGxdoDCil_MZO2jkDm_WkQ5QPF6yfhldATp0NzibGGbUEqc7sNlwqo7mQr8h8PQlLDB7D4fnoSuzBtFwxH9U6OFCopBUTPWEU3Tu0_eJ7Upgc5p9_2AlYlgZd1hz4fX8VZuAbLeJY2GfeZ533vPzai6mm-pjh6aSB3WWchVWVNkuA3hiduz_Qd5RcWIKA6Vob93daTejigtSUqhAd4ksJ59pSyFd9odcaY7W02yCexIu0s" />
+                                <div class="absolute top-4 left-4 flex gap-2">
+                                    <span
+                                        class="bg-emerald-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter flex items-center gap-1">
+                                        <span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span> BUKA
+                                        SEKARANG
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="p-8 flex flex-col flex-grow">
+                                <h3 class="font-headline text-2xl font-bold text-primary mb-2">Cimahi Mall</h3>
+                                <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+                                    Lantai GF, Jl. Gandawijaya No. 1, Setiamanah, Cimahi Tengah, Kota Cimahi
+                                </p>
+                                <div class="mt-auto space-y-3">
+                                    <a
+                                        class="flex items-center justify-between group/link bg-surface-container hover:bg-primary-container hover:text-on-primary-container p-4 rounded-xl transition-all"
+                                        href="#">
+                                        <div class="flex items-center gap-3">
+                                            <span
+                                                class="material-symbols-outlined text-primary group-hover/link:text-on-primary-container"
+                                                >map</span
+                                            >
+                                            <span class="font-semibold text-sm">Petunjuk Jalan</span>
+                                        </div>
+                                        <span
+                                            class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform"
+                                            >arrow_forward</span
+                                        >
+                                    </a>
+                                    <a
+                                        class="flex items-center justify-center gap-2 bg-[#25D366]/10 text-[#075E54] hover:bg-[#25D366] hover:text-white py-3 rounded-full font-bold text-sm transition-all"
+                                        href="#">
+                                        <span class="material-symbols-outlined text-sm">chat</span>
+                                        Chat Cabang Ini
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Placeholder for other 10+ cards (Summary logic) -->
+                        <div
+                            class="lg:col-span-2 bg-surface-container-low rounded-lg p-12 flex flex-col items-center justify-center text-center border-dashed border-2 border-outline-variant">
+                            <span class="material-symbols-outlined text-primary-container text-6xl mb-4"
+                                >more_horiz</span
+                            >
+                            <h4 class="font-headline text-2xl text-on-surface mb-2">Masih Ada 9 Cabang Lainnya</h4>
+                            <p class="text-on-surface-variant mb-6 italic font-serif">
+                                Kunjungi kami di Antapani, Batununggal, Pasteur, dan area lainnya.
+                            </p>
+                            <button
+                                class="bg-primary text-on-primary px-10 py-4 rounded-full font-bold shadow-xl hover:scale-105 transition-transform">
+                                Tampilkan Semua Lokasi
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- Sticky Map Callout (Asymmetric) -->
+            <div class="mt-32 relative group">
+                <div
+                    class="absolute -top-12 -right-12 w-64 h-64 bg-secondary-fixed rounded-full blur-3xl opacity-20 -z-10 group-hover:scale-150 transition-transform duration-700"></div>
+                <div
+                    class="bg-surface-container-high rounded-xl p-1 md:p-12 overflow-hidden flex flex-col lg:flex-row items-stretch gap-12">
+                    <div class="flex-1 space-y-8 p-8 md:p-0">
+                        <h2 class="font-headline text-4xl lg:text-6xl font-bold text-primary leading-tight">
+                            Sulit Menemukan Kami?
+                        </h2>
+                        <p class="text-xl text-on-surface-variant leading-relaxed">
+                            Gunakan peta interaktif kami untuk melihat seluruh jaringan distribusi roti Momis secara
+                            real-time di layar Anda.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button
+                                class="bg-primary text-on-primary px-12 py-5 rounded-full font-bold text-lg shadow-2xl flex items-center justify-center gap-3 hover:scale-95 transition-transform">
+                                <span class="material-symbols-outlined">explore</span>
+                                Buka Peta Besar
+                            </button>
+                            <button
+                                class="bg-surface-container-lowest text-primary px-12 py-5 rounded-full font-bold text-lg shadow-md flex items-center justify-center gap-3 hover:bg-white transition-colors">
+                                <span class="material-symbols-outlined">support_agent</span>
+                                Bantuan Admin
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex-1 min-h-[400px] rounded-lg overflow-hidden shadow-2xl">
+                        <img
+                            class="w-full h-full object-cover grayscale brightness-75 contrast-125"
+                            data-alt="Abstract minimalist map layout of Bandung city in gold and dark earth tones"
+                            data-location="Bandung"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcZKIsVHH2hEoz2KUP-xC2Yj5Pt1B0CUxRZK_Vm_Jj-U-q-pbwMl2czi0Iu80Km1pplnkYzaDrdxk0OGoG94EhuZjMObXqH1GuTUo8P61kgqDACjrIJsXMhP7Pq5KhWOLrXRfLpV7W1uRu89pnOUWWZHhbdupxYUHq-w5f8DcR3MT6-dB2-mLpgJK50Y54l60gGvxy4y9KesVtDughWyo2n_dzvoY3uidwf9q3zeckEJpkuVDkzRPtFWmf2YQ2cA_XKks_3rmnoBM" />
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- BottomNavBar (Status Bar style) -->
+        <div class="fixed bottom-8 left-0 w-full z-50 flex justify-center items-center">
+            <div
+                class="bg-amber-900/90 backdrop-blur-md text-orange-50 fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-lg rounded-full px-6 py-3 shadow-2xl flex justify-between items-center">
+                <div
+                    class="flex flex-col items-center justify-center text-orange-50/70 font-sans text-xs uppercase tracking-widest font-medium group cursor-pointer hover:text-white transition-all">
+                    <span class="material-symbols-outlined mb-1">shopping_basket</span>
+                    <span>Ringkasan</span>
+                </div>
+                <div
+                    class="flex flex-col items-center justify-center text-orange-50/70 font-sans text-xs uppercase tracking-widest font-medium group cursor-pointer hover:text-white transition-all">
+                    <span class="material-symbols-outlined mb-1">payments</span>
+                    <span>Total: Rp 0</span>
+                </div>
+                <div
+                    class="flex flex-col items-center justify-center text-orange-50/70 font-sans text-xs uppercase tracking-widest font-medium group cursor-pointer hover:text-white transition-all">
+                    <span class="material-symbols-outlined mb-1">chat</span>
+                    <span>WA</span>
+                </div>
+                <div
+                    class="flex flex-col items-center justify-center text-amber-200 font-sans text-xs uppercase tracking-widest font-bold">
+                    <span class="material-symbols-outlined mb-1" style="font-variation-settings: &quot;FILL&quot; 1"
+                        >help_outline</span
+                    >
+                    <span>Bantuan</span>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="bg-stone-100 w-full py-12 px-8 flex flex-col items-center justify-center text-center space-y-4">
+            <div class="bg-stone-200 h-[1px] w-full mb-8"></div>
+            <div class="text-amber-900 font-bold text-xl font-headline italic">Momis Bakery</div>
+            <p class="font-serif text-sm italic text-stone-500">© 2023 Momis Bakery. Dibuat dengan cinta.</p>
+            <div class="flex gap-6">
+                <a class="text-stone-500 hover:text-amber-700 text-sm font-serif italic" href="#">Kebijakan Privasi</a>
+                <a class="text-stone-500 hover:text-amber-700 text-sm font-serif italic" href="#"
+                    >Syarat &amp; Ketentuan</a
+                >
+                <a class="text-stone-500 hover:text-amber-700 text-sm font-serif italic" href="#">Kontak Media</a>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,484 @@
+<!doctype html>
+
+<html class="light" lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "on-surface": "#201b10",
+                            "on-primary-container": "#ffc29f",
+                            "tertiary-container": "#585a47",
+                            "surface-container-low": "#fef2e0",
+                            "primary-container": "#8b4513",
+                            secondary: "#775a00",
+                            primary: "#6c2f00",
+                            "surface-container-lowest": "#ffffff",
+                            "inverse-primary": "#ffb68c",
+                            "surface-container": "#f8ecda",
+                            "tertiary-fixed-dim": "#c8c8b0",
+                            "on-secondary-container": "#6f5400",
+                            "on-secondary-fixed-variant": "#5a4300",
+                            surface: "#fff8f2",
+                            "primary-fixed": "#ffdbc9",
+                            "on-error-container": "#93000a",
+                            tertiary: "#414231",
+                            "secondary-fixed": "#ffdf99",
+                            "surface-variant": "#ede1cf",
+                            outline: "#877369",
+                            "secondary-fixed-dim": "#f3bf32",
+                            "on-primary": "#ffffff",
+                            "error-container": "#ffdad6",
+                            "surface-dim": "#e4d9c7",
+                            "inverse-on-surface": "#fbefdd",
+                            "on-tertiary-container": "#d1d1b9",
+                            "on-primary-fixed": "#321200",
+                            "on-tertiary-fixed": "#1b1d0e",
+                            "on-secondary-fixed": "#251a00",
+                            "surface-tint": "#934b19",
+                            "surface-container-highest": "#ede1cf",
+                            "surface-bright": "#fff8f2",
+                            "on-secondary": "#ffffff",
+                            background: "#fff8f2",
+                            "tertiary-fixed": "#e4e4cc",
+                            "on-background": "#201b10",
+                            error: "#ba1a1a",
+                            "surface-container-high": "#f2e7d5",
+                            "inverse-surface": "#363024",
+                            "primary-fixed-dim": "#ffb68c",
+                            "on-tertiary": "#ffffff",
+                            "secondary-container": "#fdc73b",
+                            "on-surface-variant": "#54433a",
+                            "outline-variant": "#dac2b6",
+                            "on-primary-fixed-variant": "#753401",
+                            "on-tertiary-fixed-variant": "#474836",
+                            "on-error": "#ffffff",
+                        },
+                        fontFamily: {
+                            headline: ["Noto Serif"],
+                            body: ["Plus Jakarta Sans"],
+                            label: ["Plus Jakarta Sans"],
+                        },
+                        borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" },
+                    },
+                },
+            };
+        </script>
+        <style>
+            .material-symbols-outlined {
+                font-variation-settings:
+                    "FILL" 0,
+                    "wght" 400,
+                    "GRAD" 0,
+                    "opsz" 24;
+            }
+            body {
+                font-family: "Plus Jakarta Sans", sans-serif;
+                background-color: #fff8f2;
+                color: #201b10;
+            }
+            h1,
+            h2,
+            h3,
+            h4 {
+                font-family: "Noto Serif", serif;
+            }
+            .glass-nav {
+                backdrop-filter: blur(20px);
+            }
+        </style>
+    </head>
+    <body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+        <!-- TopNavBar -->
+        <nav
+            class="fixed top-0 w-full z-50 bg-orange-50/80 dark:bg-stone-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+            <div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+                <div class="text-2xl font-bold tracking-tight text-amber-900 dark:text-amber-500">Momis Bakery</div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a class="text-stone-600 dark:text-stone-400 hover:text-amber-800 transition-colors" href="index.html"
+                        >Home</a
+                    >
+                    <a
+                        class="text-amber-700 dark:text-amber-400 font-semibold border-b-2 border-amber-700 dark:border-amber-400 pb-1"
+                        href="menu.html"
+                        >Menu Favorit</a
+                    >
+                    <a class="text-stone-600 dark:text-stone-400 hover:text-amber-800 transition-colors" href="outlet.html"
+                        >Lokasi Cabang</a
+                    >
+                    <a class="text-stone-600 dark:text-stone-400 hover:text-amber-800 transition-colors" href="about.html"
+                        >Tentang Kami</a
+                    >
+                </div>
+                <div class="flex items-center space-x-4">
+                    <!-- <button
+                        class="hidden lg:block text-amber-900 px-4 py-2 font-medium hover:scale-95 transition-transform duration-200">
+                        Pilih Cabang
+                    </button> -->
+                    <button
+                        class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-semibold hover:scale-95 transition-transform duration-200 shadow-lg shadow-primary/20">
+                        Pesan Sekarang
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <main class="pt-28 pb-32 px-6 max-w-screen-2xl mx-auto">
+            <!-- Hero Section Header -->
+            <header class="mb-16">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 max-w-3xl leading-tight">
+                    Kelezatan Klasik, <span class="italic text-primary">Sentuhan Modern.</span>
+                </h1>
+                <p class="text-lg text-on-surface-variant max-w-xl">
+                    Jelajahi koleksi roti artisan dan pastry premium kami yang dipanggang segar setiap pagi dengan
+                    bahan-bahan organik pilihan.
+                </p>
+            </header>
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Filter Sidebar -->
+                <aside class="lg:w-64 flex-shrink-0 space-y-10">
+                    <div>
+                        <h3 class="text-xs uppercase tracking-[0.2em] font-bold text-on-surface-variant mb-6">
+                            Kategori Menu
+                        </h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center group cursor-pointer">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center mr-4 group-hover:bg-primary group-hover:text-on-primary transition-all">
+                                    <span class="material-symbols-outlined text-lg" data-icon="restaurant_menu"
+                                        >restaurant_menu</span
+                                    >
+                                </div>
+                                <span class="font-medium">Semua Menu</span>
+                            </label>
+                            <label class="flex items-center group cursor-pointer">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center mr-4 group-hover:bg-primary group-hover:text-on-primary transition-all">
+                                    <span class="material-symbols-outlined text-lg" data-icon="cake">cake</span>
+                                </div>
+                                <span class="font-medium">Sweet</span>
+                            </label>
+                            <label class="flex items-center group cursor-pointer">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center mr-4 group-hover:bg-primary group-hover:text-on-primary transition-all">
+                                    <span class="material-symbols-outlined text-lg" data-icon="bakery_dining"
+                                        >bakery_dining</span
+                                    >
+                                </div>
+                                <span class="font-medium">Savory</span>
+                            </label>
+                            <label class="flex items-center group cursor-pointer text-primary">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center mr-4">
+                                    <span class="material-symbols-outlined text-lg" data-icon="auto_awesome"
+                                        >auto_awesome</span
+                                    >
+                                </div>
+                                <span class="font-bold">Viral Hits</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="p-6 rounded-lg bg-surface-container-low border border-outline-variant/10">
+                        <h4 class="font-headline font-bold mb-3 text-primary">Promo Hari Ini</h4>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">
+                            Beli 2 Sourdough varian apa saja, GRATIS 1 Butter Croissant.
+                        </p>
+                        <div
+                            class="mt-4 inline-block px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold">
+                            KODE: MOMIS21
+                        </div>
+                    </div>
+                </aside>
+                <!-- Product Grid -->
+                <section class="flex-grow">
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-12">
+                        <!-- Card 1 -->
+                        <div
+                            class="group relative bg-surface-container-lowest p-4 rounded-lg shadow-sm hover:shadow-xl transition-all duration-500">
+                            <div class="relative aspect-[4/5] overflow-hidden rounded-lg mb-6">
+                                <img
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    data-alt="Close-up of golden brown buttery croissants stacked on a rustic wooden tray in a warm bakery setting"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPl6_H5GmxQXUF0Py9j32jmKY4DmBeZ6nOXT5sEdrgSEQICFbuBpYO4tKagUW_TsFsHZ7-0e4sJJmiaCiAtgQ5_MmxXxd6j_3EF2hg5B1Hs8Ai12RNT2EMVlw3-aTIyAJMy2MZy3bEYX4xq90lxCOBBPCXd4hp1FjooylcVTtCcd9_4rArYgPhPwTWgztasK1i-RfoIqflsZZJCHEtN2yMTmLx9Zfq7cTbARO4IumUmoB7nnidwVjsNBYWFSCMfI9kNU7Zobh4Rk4" />
+                                <div class="absolute top-4 left-4 flex flex-col gap-2">
+                                    <span
+                                        class="bg-primary text-on-primary text-[10px] font-bold px-3 py-1 rounded-full tracking-widest uppercase"
+                                        >BEST SELLER</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="px-2">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3
+                                        class="text-2xl font-bold leading-tight group-hover:text-primary transition-colors">
+                                        Butter Croissant Royale
+                                    </h3>
+                                    <span class="text-lg font-bold text-primary">Rp 28k</span>
+                                </div>
+                                <p class="text-sm text-on-surface-variant line-clamp-2 mb-6">
+                                    Pastry berlapis mentega Prancis murni dengan tekstur renyah di luar dan lembut di
+                                    dalam.
+                                </p>
+                                <button
+                                    class="w-full bg-surface-container-highest text-on-surface hover:bg-primary hover:text-on-primary py-4 rounded-full font-bold transition-all flex items-center justify-center gap-2 group/btn">
+                                    <span
+                                        class="material-symbols-outlined text-lg group-hover/btn:scale-110 transition-transform"
+                                        data-icon="add_shopping_cart"
+                                        >add_shopping_cart</span
+                                    >
+                                    Tambah Pesanan
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div
+                            class="group relative bg-surface-container-lowest p-4 rounded-lg shadow-sm hover:shadow-xl transition-all duration-500">
+                            <div class="relative aspect-[4/5] overflow-hidden rounded-lg mb-6">
+                                <img
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    data-alt="Artisanal sourdough bread with beautiful score marks on a floured surface with dramatic side lighting"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgATTwoRfX066r-APO8cqk6HROE-s--i206rrRaLw_MrrGW9iKPKWiYth_WUiRKroWEnx7DYYbwjoO0a_fuvPe7EmlmppmZfBowez4brbDJp2rJ2SyV34TuCoeqq2w0rvh1wN0gfZ9GyvuT5sGAIefX18prGs1RB50g4qHZfAdrWol96mJaYwGCD0-2Qg-WDE06NdFik5r4StbfJcM84DQEtS3dBGME2Y48HsZ2lc9FYdMNZj_rxD-oXt1B-Zh33QDVXEwGFgZbVY" />
+                                <div class="absolute top-4 left-4 flex flex-col gap-2">
+                                    <span
+                                        class="bg-secondary-container text-on-secondary-container text-[10px] font-bold px-3 py-1 rounded-full tracking-widest uppercase"
+                                        >VIRAL HITS</span
+                                    >
+                                    <span
+                                        class="bg-error-container text-on-error-container text-[10px] font-bold px-3 py-1 rounded-full tracking-widest uppercase"
+                                        >SISA 3</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="px-2">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3
+                                        class="text-2xl font-bold leading-tight group-hover:text-primary transition-colors">
+                                        Signature Sourdough
+                                    </h3>
+                                    <span class="text-lg font-bold text-primary">Rp 45k</span>
+                                </div>
+                                <p class="text-sm text-on-surface-variant line-clamp-2 mb-6">
+                                    Fermentasi alami selama 24 jam menghasilkan aroma dan rasa autentik dengan kulit
+                                    yang renyah.
+                                </p>
+                                <button
+                                    class="w-full bg-surface-container-highest text-on-surface hover:bg-primary hover:text-on-primary py-4 rounded-full font-bold transition-all flex items-center justify-center gap-2 group/btn">
+                                    <span
+                                        class="material-symbols-outlined text-lg group-hover/btn:scale-110 transition-transform"
+                                        data-icon="add_shopping_cart"
+                                        >add_shopping_cart</span
+                                    >
+                                    Tambah Pesanan
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div
+                            class="group relative bg-surface-container-lowest p-4 rounded-lg shadow-sm hover:shadow-xl transition-all duration-500">
+                            <div class="relative aspect-[4/5] overflow-hidden rounded-lg mb-6">
+                                <img
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    data-alt="Danish pastry filled with fresh berries and cream glaze on a ceramic plate"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjd-1Q_wLmvVQbdRafOEWvXI-aoMEqGg5uIfYvIAw1ebj7QgOcMNn8eXriHFEQUXzlMdthJmK2O67avEJ5fBjMHkeQuOiZqCC6WW6GyGvjOjkZpPlEGHo9oGESlfziqQFHEAdRO6HZtxztUClwwIdtkPrCcGWkmNzHRmvPNh2OUuJQy766dgX1CjKPJyA4w3RCSTHd5Nif-crBGIzKNP9PmdSPvLvDYwvDBYzQIdio3_GUEXczQv0zUlhqlZQvoPJcipJ0bRari5k" />
+                                <div class="absolute top-4 left-4 flex flex-col gap-2">
+                                    <span
+                                        class="bg-primary-container text-on-primary-container text-[10px] font-bold px-3 py-1 rounded-full tracking-widest uppercase"
+                                        >PROMO</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="px-2">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3
+                                        class="text-2xl font-bold leading-tight group-hover:text-primary transition-colors">
+                                        Berry Glazed Danish
+                                    </h3>
+                                    <span class="text-lg font-bold text-primary">Rp 32k</span>
+                                </div>
+                                <p class="text-sm text-on-surface-variant line-clamp-2 mb-6">
+                                    Pastry manis dengan isian custard vanilla dan topping buah berry segar pilihan.
+                                </p>
+                                <button
+                                    class="w-full bg-surface-container-highest text-on-surface hover:bg-primary hover:text-on-primary py-4 rounded-full font-bold transition-all flex items-center justify-center gap-2 group/btn">
+                                    <span
+                                        class="material-symbols-outlined text-lg group-hover/btn:scale-110 transition-transform"
+                                        data-icon="add_shopping_cart"
+                                        >add_shopping_cart</span
+                                    >
+                                    Tambah Pesanan
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div
+                            class="group relative bg-surface-container-lowest p-4 rounded-lg shadow-sm hover:shadow-xl transition-all duration-500">
+                            <div class="relative aspect-[4/5] overflow-hidden rounded-lg mb-6">
+                                <img
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    data-alt="Gooey dark chocolate brownies with sea salt sprinkles on a cooling rack"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvnF9tf-nGQRm1i_2bJUtJ1l_QX-44sbjgopcgSntdvHZMmijvEOkdoFycC5UzsPjrR3TLvR_EaQwCyBXaUUXWpXyL4M9TGTFeFTdZFoOB8EEYsSiKMLEiovuod7SShy-gleNPXunVl3ni-_3ujfCyP-mzHbFYFtK8-OckcEuGKSKHLxjR2VTLhtOy_QCvEQcu1J7nJj3QFW0ZNJduRYlCRwRHTDwDwszRZwOJvg6jCYVrx-LrYCTcBwFpvlsg5leXNPfMBBFN1Gc" />
+                            </div>
+                            <div class="px-2">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3
+                                        class="text-2xl font-bold leading-tight group-hover:text-primary transition-colors">
+                                        Salted Dark Brownie
+                                    </h3>
+                                    <span class="text-lg font-bold text-primary">Rp 22k</span>
+                                </div>
+                                <p class="text-sm text-on-surface-variant line-clamp-2 mb-6">
+                                    Fudgy brownie dengan 70% dark chocolate dan taburan sea salt Maldon.
+                                </p>
+                                <button
+                                    class="w-full bg-surface-container-highest text-on-surface hover:bg-primary hover:text-on-primary py-4 rounded-full font-bold transition-all flex items-center justify-center gap-2 group/btn">
+                                    <span
+                                        class="material-symbols-outlined text-lg group-hover/btn:scale-110 transition-transform"
+                                        data-icon="add_shopping_cart"
+                                        >add_shopping_cart</span
+                                    >
+                                    Tambah Pesanan
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div
+                            class="group relative bg-surface-container-lowest p-4 rounded-lg shadow-sm hover:shadow-xl transition-all duration-500">
+                            <div class="relative aspect-[4/5] overflow-hidden rounded-lg mb-6">
+                                <img
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    data-alt="Savory cheese and ham stuffed bread loaf sliced open showing melty texture"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJgvpY2VGszQaU5fHzR63ZeBdprzF1AEdnqw3tiOY52rVQvFcVqW5zXt78mATVQke8jDK6t_e6Cy-l8w3_kO1F1sajxF7EWo-fOABDwK17xzK9Rsgiigp4zmltkBFTQC4U0UQKZKJIZ7SNfcYQrveDJ7X80RVRGEgYcGXznu11mAfIDpp7Am3GrjJMYXNAMdrhoIoHqX-6bJXX23DDgjgwoohb-xXM2rLJLAigsWRKMZtWDO4WvfVPbiaetTr85T_Enhrp0OiEj-A" />
+                                <div class="absolute top-4 left-4 flex flex-col gap-2">
+                                    <span
+                                        class="bg-primary text-on-primary text-[10px] font-bold px-3 py-1 rounded-full tracking-widest uppercase"
+                                        >BEST SELLER</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="px-2">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3
+                                        class="text-2xl font-bold leading-tight group-hover:text-primary transition-colors">
+                                        Triple Cheese Loaf
+                                    </h3>
+                                    <span class="text-lg font-bold text-primary">Rp 58k</span>
+                                </div>
+                                <p class="text-sm text-on-surface-variant line-clamp-2 mb-6">
+                                    Roti tawar premium dengan limpahan keju Cheddar, Mozzarella, dan Parmesan di
+                                    dalamnya.
+                                </p>
+                                <button
+                                    class="w-full bg-surface-container-highest text-on-surface hover:bg-primary hover:text-on-primary py-4 rounded-full font-bold transition-all flex items-center justify-center gap-2 group/btn">
+                                    <span
+                                        class="material-symbols-outlined text-lg group-hover/btn:scale-110 transition-transform"
+                                        data-icon="add_shopping_cart"
+                                        >add_shopping_cart</span
+                                    >
+                                    Tambah Pesanan
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Card 6 -->
+                        <div
+                            class="group relative bg-surface-container-lowest p-4 rounded-lg shadow-sm hover:shadow-xl transition-all duration-500">
+                            <div class="relative aspect-[4/5] overflow-hidden rounded-lg mb-6">
+                                <img
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    data-alt="Tiramisu cake slice with cocoa powder dusting on a gold plate"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZsGhSzBSG53MTAXbkcOs6P8Alp9OPpR8S3ahyah3UTv89Hl9W7M4UXu3zuWwm13Rvb_HehnYJc7CEo1Zr0-1TnFjHDaisIF5AiVw3ddbpCLnFx44DmqlD7VeHIQnoepkLvQBRDLmkTOmedgOJi1AHwLskPKZYyChfz9S6C0aU2GxP9MuLny7GKSUIjmfg--ew3sblIiFhW_VHEiMSIkXSvb8PbtWgATJNf7lPLW1Xpt_s1iNt07fNWukYLMf2OE6fyYMCNm1UqbI" />
+                            </div>
+                            <div class="px-2">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3
+                                        class="text-2xl font-bold leading-tight group-hover:text-primary transition-colors">
+                                        Momis Tiramisu Slice
+                                    </h3>
+                                    <span class="text-lg font-bold text-primary">Rp 38k</span>
+                                </div>
+                                <p class="text-sm text-on-surface-variant line-clamp-2 mb-6">
+                                    Resep klasik Tiramisu dengan sentuhan espresso Momis dan mascarpone yang sangat
+                                    lembut.
+                                </p>
+                                <button
+                                    class="w-full bg-surface-container-highest text-on-surface hover:bg-primary hover:text-on-primary py-4 rounded-full font-bold transition-all flex items-center justify-center gap-2 group/btn">
+                                    <span
+                                        class="material-symbols-outlined text-lg group-hover/btn:scale-110 transition-transform"
+                                        data-icon="add_shopping_cart"
+                                        >add_shopping_cart</span
+                                    >
+                                    Tambah Pesanan
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <!-- BottomNavBar (Floating Checkout Bar) -->
+        <div class="fixed bottom-8 left-0 w-full z-50 flex justify-center items-center">
+            <div
+                class="bg-amber-900/90 dark:bg-stone-900/95 backdrop-blur-md text-orange-50 rounded-full px-8 py-4 flex items-center justify-between w-[95%] max-w-2xl shadow-2xl shadow-amber-900/40">
+                <div class="flex items-center gap-6">
+                    <div class="flex flex-col items-start">
+                        <span class="font-sans text-[10px] uppercase tracking-widest font-medium opacity-70"
+                            >Ringkasan Pesanan</span
+                        >
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-amber-200" data-icon="shopping_basket"
+                                >shopping_basket</span
+                            >
+                            <span class="font-bold text-lg">3 Items</span>
+                        </div>
+                    </div>
+                    <div class="h-8 w-[1px] bg-white/20"></div>
+                    <div class="flex flex-col items-start">
+                        <span class="font-sans text-[10px] uppercase tracking-widest font-medium opacity-70"
+                            >Total Pembayaran</span
+                        >
+                        <span class="font-bold text-lg text-amber-200">Rp 105.000</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="flex flex-col items-center justify-center text-orange-50/70 hover:text-white transition-all hover:scale-110">
+                        <span class="material-symbols-outlined" data-icon="chat">chat</span>
+                        <span class="text-[8px] mt-1">Bantuan</span>
+                    </button>
+                    <button
+                        class="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-full font-extrabold flex items-center gap-2 hover:scale-[0.98] transition-transform active:scale-95">
+                        <span>Checkout WA</span>
+                        <span class="material-symbols-outlined text-xl" data-icon="payments">payments</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="w-full py-12 px-8 bg-stone-100 dark:bg-stone-950 text-stone-800 dark:text-stone-200">
+            <div class="bg-stone-200 dark:bg-stone-900 h-[1px] w-full mb-8"></div>
+            <div class="flex flex-col items-center justify-center text-center space-y-4">
+                <div class="text-amber-900 font-bold text-xl">Momis Bakery</div>
+                <div class="flex flex-wrap justify-center gap-6 font-serif italic text-sm">
+                    <a class="text-stone-500 hover:text-amber-700" href="#">Kebijakan Privasi</a>
+                    <a class="text-stone-500 hover:text-amber-700" href="#">Syarat &amp; Ketentuan</a>
+                    <a class="text-stone-500 hover:text-amber-700" href="#">Kontak Media</a>
+                </div>
+                <p class="font-serif text-sm italic text-stone-500">© 2023 Momis Bakery. Dibuat dengan cinta.</p>
+            </div>
+        </footer>
+    </body>
+</html>

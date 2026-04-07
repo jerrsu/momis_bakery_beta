@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Momis Bakery</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Plus+Jakarta+Sans&display=swap" rel="stylesheet"/>
+
+  <style>
+    body {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      background: #fff8f2;
+      color: #201b10;
+    }
+    .font-serif { font-family: "Noto Serif", serif; }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full bg-white/80 backdrop-blur z-50 shadow">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <h1 class="text-xl font-bold text-amber-900">Momis Bakery</h1>
+    <div class="space-x-6 hidden md:block">
+      <a href="#" class="font-semibold text-amber-800">Home</a>
+      <a href="/menu.html">Menu</a>
+      <a href="#">Lokasi</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="h-screen flex items-center px-8">
+  <div>
+    <h1 class="text-6xl font-bold text-amber-900">
+      Roti Viral Terpopuler
+    </h1>
+    <p class="mt-4 text-lg">
+      Roti fresh setiap hari, lembut & premium.
+    </p>
+    <a href="/menu.html" class="mt-6 inline-block bg-amber-800 text-white px-6 py-3 rounded-full">
+      Pesan Sekarang
+    </a>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="py-20 px-8">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="flex justify-between mb-10">
+      <h2 class="text-3xl font-bold text-amber-900">Best Seller</h2>
+      <a href="/menu.html" class="border-b border-amber-800">Lihat Semua</a>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-6">
+
+      <div class="bg-white p-4 rounded-xl shadow">
+        <img src="https://via.placeholder.com/300" class="rounded-lg mb-4">
+        <h3 class="font-bold">Korean Sweet Potato</h3>
+        <p class="text-sm italic">Lembut & manis</p>
+        <p class="mt-2 font-bold text-amber-800">Rp 18.000</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow">
+        <img src="https://via.placeholder.com/300" class="rounded-lg mb-4">
+        <h3 class="font-bold">Garlic Cheese</h3>
+        <p class="text-sm italic">Creamy gurih</p>
+        <p class="mt-2 font-bold text-amber-800">Rp 22.000</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow">
+        <img src="https://via.placeholder.com/300" class="rounded-lg mb-4">
+        <h3 class="font-bold">Croissant</h3>
+        <p class="text-sm italic">Flaky premium</p>
+        <p class="mt-2 font-bold text-amber-800">Rp 25.000</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow">
+        <img src="https://via.placeholder.com/300" class="rounded-lg mb-4">
+        <h3 class="font-bold">Milk Bread</h3>
+        <p class="text-sm italic">Super lembut</p>
+        <p class="mt-2 font-bold text-amber-800">Rp 35.000</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- REVIEW CAROUSEL -->
+<section class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-8 text-center">
+    <h2 class="text-3xl font-bold text-amber-900 mb-10">Apa Kata Mereka</h2>
+
+    <div class="overflow-hidden">
+      <div id="track" class="flex gap-6 transition-all duration-500">
+
+        <div class="min-w-[30%] bg-gray-100 p-6 rounded-xl">
+          "Rotinya lembut banget!"
+        </div>
+
+        <div class="min-w-[30%] bg-gray-100 p-6 rounded-xl">
+          "Best bakery di Bandung!"
+        </div>
+
+        <div class="min-w-[30%] bg-gray-100 p-6 rounded-xl">
+          "Nagih parah!"
+        </div>
+
+        <div class="min-w-[30%] bg-gray-100 p-6 rounded-xl">
+          "Wajib coba!"
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="py-20 text-center">
+  <h3 class="text-2xl font-bold mb-6">Instagram</h3>
+
+  <iframe src="https://snapwidget.com/embed/your-widget-id"
+          class="w-full h-[400px] border-none"></iframe>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white py-10 px-8">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+
+    <div>
+      <h3 class="font-bold">Momis Bakery</h3>
+      <p>Roti viral Bandung</p>
+    </div>
+
+    <div>
+      <h4 class="font-bold">Menu</h4>
+      <ul>
+        <li><a href="/menu.html">Semua Menu</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-bold">Kontak</h4>
+      <p>08123456789</p>
+    </div>
+
+    <div>
+      <h4 class="font-bold">Social</h4>
+      <p>@momisbakery</p>
+    </div>
+
+  </div>
+
+  <p class="text-center mt-6 text-sm">© 2026 Momis Bakery</p>
+</footer>
+
+<!-- FLOATING WA -->
+<a href="https://wa.me/6281234567890"
+   class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg">
+   WA
+</a>
+
+<!-- SCRIPT CAROUSEL -->
+<script>
+let i = 0;
+const track = document.getElementById("track");
+
+setInterval(() => {
+  i++;
+  if (i > track.children.length - 3) i = 0;
+  track.style.transform = `translateX(-${i * 33.33}%)`;
+}, 3000);
+</script>
+
+</body>
+</html>

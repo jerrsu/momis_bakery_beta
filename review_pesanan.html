@@ -1,0 +1,374 @@
+<!doctype html>
+
+<html class="light" lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "on-primary": "#ffffff",
+                            "surface-container": "#f8ecda",
+                            "outline-variant": "#dac2b6",
+                            "surface-tint": "#934b19",
+                            "surface-container-low": "#fef2e0",
+                            "on-surface": "#201b10",
+                            "error-container": "#ffdad6",
+                            "on-secondary-fixed-variant": "#5a4300",
+                            "on-primary-fixed": "#321200",
+                            outline: "#877369",
+                            "secondary-fixed": "#ffdf99",
+                            "tertiary-fixed": "#e4e4cc",
+                            "surface-container-high": "#f2e7d5",
+                            "on-secondary-container": "#6f5400",
+                            "on-secondary-fixed": "#251a00",
+                            "on-tertiary-fixed": "#1b1d0e",
+                            secondary: "#775a00",
+                            "on-error-container": "#93000a",
+                            "on-error": "#ffffff",
+                            "inverse-surface": "#363024",
+                            "on-background": "#201b10",
+                            background: "#fff8f2",
+                            "tertiary-container": "#585a47",
+                            "secondary-fixed-dim": "#f3bf32",
+                            "on-primary-container": "#ffc29f",
+                            "on-tertiary": "#ffffff",
+                            primary: "#6c2f00",
+                            "tertiary-fixed-dim": "#c8c8b0",
+                            "inverse-primary": "#ffb68c",
+                            "primary-container": "#8b4513",
+                            "surface-container-lowest": "#ffffff",
+                            tertiary: "#414231",
+                            surface: "#fff8f2",
+                            "primary-fixed": "#ffdbc9",
+                            "surface-variant": "#ede1cf",
+                            "on-tertiary-container": "#d1d1b9",
+                            "on-tertiary-fixed-variant": "#474836",
+                            "surface-bright": "#fff8f2",
+                            "on-primary-fixed-variant": "#753401",
+                            "primary-fixed-dim": "#ffb68c",
+                            "surface-container-highest": "#ede1cf",
+                            "inverse-on-surface": "#fbefdd",
+                            "on-surface-variant": "#54433a",
+                            "on-secondary": "#ffffff",
+                            "surface-dim": "#e4d9c7",
+                            "secondary-container": "#fdc73b",
+                            error: "#ba1a1a",
+                        },
+                        borderRadius: {
+                            DEFAULT: "1rem",
+                            lg: "2rem",
+                            xl: "3rem",
+                            full: "9999px",
+                        },
+                        fontFamily: {
+                            headline: ["Noto Serif"],
+                            body: ["Plus Jakarta Sans"],
+                            label: ["Plus Jakarta Sans"],
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            body {
+                font-family: "Plus Jakarta Sans", sans-serif;
+                background-color: #fff8f2;
+                color: #201b10;
+            }
+            .font-serif {
+                font-family: "Noto Serif", serif;
+            }
+            .material-symbols-outlined {
+                font-variation-settings:
+                    "FILL" 0,
+                    "wght" 400,
+                    "GRAD" 0,
+                    "opsz" 24;
+            }
+            .active-squish:active {
+                transform: scale(0.96);
+                transition: transform 0.1s;
+            }
+        </style>
+    </head>
+    <body class="bg-background text-on-surface">
+        <!-- TopNavBar Navigation Shell -->
+        <nav
+            class="bg-[#fff8f2]/70 backdrop-blur-xl docked full-width top-0 sticky z-50 tonal-shift-bg-surface-container-low">
+            <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+                <div class="text-2xl font-bold font-serif text-[#6c2f00] dark:text-[#fef2e0]">Golden Crust</div>
+                <div class="hidden md:flex items-center space-gap-8 gap-8">
+                    <a
+                        class="text-[#6c2f00]/60 dark:text-[#ede1cf]/60 hover:bg-[#fef2e0] transition-all duration-300 px-3 py-1 rounded-full"
+                        href="#"
+                        >Katalog</a
+                    >
+                    <a
+                        class="text-[#6c2f00]/60 dark:text-[#ede1cf]/60 hover:bg-[#fef2e0] transition-all duration-300 px-3 py-1 rounded-full"
+                        href="#"
+                        >Tentang Kami</a
+                    >
+                    <a
+                        class="text-[#6c2f00]/60 dark:text-[#ede1cf]/60 hover:bg-[#fef2e0] transition-all duration-300 px-3 py-1 rounded-full"
+                        href="#"
+                        >Lokasi</a
+                    >
+                </div>
+                <div class="flex items-center gap-4">
+                    <button class="text-[#6c2f00] p-2 hover:bg-[#fef2e0] rounded-full transition-all">
+                        <span class="material-symbols-outlined" data-icon="shopping_basket">shopping_basket</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <main class="max-w-7xl mx-auto px-6 py-12 md:py-20 min-h-screen">
+            <header class="mb-16">
+                <h1 class="font-serif text-5xl md:text-6xl text-primary tracking-tight mb-4">Review Pesanan</h1>
+                <p class="text-on-surface-variant max-w-xl">
+                    Pastikan setiap detail roti pilihan Anda sudah sesuai sebelum kami menyiapkannya dengan penuh cinta.
+                </p>
+            </header>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <!-- Left Side: Order Summary -->
+                <section class="lg:col-span-7 space-y-8">
+                    <div class="bg-surface-container-low rounded-xl p-8 space-y-8">
+                        <h2 class="font-serif text-2xl text-primary flex items-center gap-3">
+                            <span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+                            Daftar Keranjang
+                        </h2>
+                        <!-- Item 1 -->
+                        <div class="flex flex-col sm:flex-row gap-6 items-center">
+                            <div class="w-32 h-32 rounded-lg overflow-hidden shrink-0">
+                                <img
+                                    class="w-full h-full object-cover"
+                                    data-alt="Close up of a classic soft Indonesian Roti Sisir bread with buttery glaze on a wooden board"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEvylOrvugDhRgH9Y9WeQEqtf0GRDyHh4MATzufKvgH1rXIPLSy6R1j9HKQLK2d5a6FgflVUr89wG9reY_q5Xmq3DP3Q_L_tBxnzNlglOSqY1LY_e_GAd7TiRTpGijDSEr3qs6b3p9c1gAG17QAYn6HdaXY6ze1jjYLKfODLNHB9c3UaTILCAj1LRI2j5awWlLVRB0KOAyW-1ThGKRpwfe7Oi7BEqxXgz5u73RDjcYvQ1IzcKp5cN9oQfGrVXmh1XHMdGqLnKwTmQ" />
+                            </div>
+                            <div class="flex-grow space-y-1">
+                                <h3 class="font-serif text-xl text-on-surface">Roti Sisir Klasik</h3>
+                                <p class="text-sm text-on-surface-variant">Roti mentega lembut resep turun-temurun.</p>
+                                <p class="text-primary font-bold mt-2">Rp 18.000</p>
+                            </div>
+                            <div class="flex items-center gap-4 bg-surface-container-high px-4 py-2 rounded-full">
+                                <button class="text-primary hover:scale-110 active-squish transition-all">
+                                    <span class="material-symbols-outlined text-lg">remove</span>
+                                </button>
+                                <span class="font-semibold w-6 text-center">2</span>
+                                <button class="text-primary hover:scale-110 active-squish transition-all">
+                                    <span class="material-symbols-outlined text-lg">add</span>
+                                </button>
+                            </div>
+                            <button
+                                class="text-error hover:bg-error-container/20 p-2 rounded-full transition-all active-squish">
+                                <span class="material-symbols-outlined">delete</span>
+                            </button>
+                        </div>
+                        <div class="h-[1px] bg-outline-variant/20"></div>
+                        <!-- Item 2 -->
+                        <div class="flex flex-col sm:flex-row gap-6 items-center">
+                            <div class="w-32 h-32 rounded-lg overflow-hidden shrink-0">
+                                <img
+                                    class="w-full h-full object-cover"
+                                    data-alt="Golden brown flaky cheese croissant on an artisanal ceramic plate with crumbs"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDHqJ5eLchfDMJdzMzO8q3c-5i0qGIaK46yo4UBBJazHwrQHJPKa63fPCfqjJmtxdR-dNqm2hs-7BxWzVZwHU9wyaht-3Ex22ln49dT5mFlyp_Vcsz1u2tEjxS9gk759tO-yAJk2L7XcQpCy_i1dmleY7X12PAprvSIo9kOU3g1m_mfSx_JbeqAm_SFmJ18B0XfNbOcqpjFz2OFHvAbKWpK_SF5lDIpwU9TeQYZUkoHobYVGQ_wLCddnDly4PnfIpmPtzCDmUR11w" />
+                            </div>
+                            <div class="flex-grow space-y-1">
+                                <h3 class="font-serif text-xl text-on-surface">Croissant Keju</h3>
+                                <p class="text-sm text-on-surface-variant">
+                                    Lapisan renyah dengan keju cheddar melimpah.
+                                </p>
+                                <p class="text-primary font-bold mt-2">Rp 24.000</p>
+                            </div>
+                            <div class="flex items-center gap-4 bg-surface-container-high px-4 py-2 rounded-full">
+                                <button class="text-primary hover:scale-110 active-squish transition-all">
+                                    <span class="material-symbols-outlined text-lg">remove</span>
+                                </button>
+                                <span class="font-semibold w-6 text-center">1</span>
+                                <button class="text-primary hover:scale-110 active-squish transition-all">
+                                    <span class="material-symbols-outlined text-lg">add</span>
+                                </button>
+                            </div>
+                            <button
+                                class="text-error hover:bg-error-container/20 p-2 rounded-full transition-all active-squish">
+                                <span class="material-symbols-outlined">delete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Price Summary -->
+                    <div class="bg-surface-container p-8 rounded-xl space-y-4">
+                        <div class="flex justify-between text-on-surface-variant">
+                            <span>Subtotal</span>
+                            <span>Rp 60.000</span>
+                        </div>
+                        <div class="flex justify-between text-on-surface-variant">
+                            <span>Biaya Layanan</span>
+                            <span>Rp 2.000</span>
+                        </div>
+                        <div class="pt-4 border-t border-outline-variant/30 flex justify-between items-end">
+                            <div>
+                                <p class="text-sm uppercase tracking-wider text-on-surface-variant font-semibold">
+                                    Total Pembayaran
+                                </p>
+                                <p class="font-serif text-4xl text-primary font-bold">Rp 62.000</p>
+                            </div>
+                            <div class="hidden sm:block">
+                                <span
+                                    class="bg-primary/10 text-primary px-4 py-2 rounded-full text-xs font-bold uppercase tracking-tighter italic"
+                                    >Diskon Anggota Aktif</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Right Side: Delivery Form -->
+                <aside class="lg:col-span-5">
+                    <div
+                        class="bg-surface-container-highest rounded-xl p-8 shadow-[0_12px_40px_rgba(32,27,16,0.06)] space-y-8 sticky top-24">
+                        <h2 class="font-serif text-2xl text-primary">Informasi Pengiriman</h2>
+                        <div class="space-y-6">
+                            <div class="space-y-2">
+                                <label
+                                    class="text-sm font-semibold uppercase tracking-widest text-on-surface-variant ml-2"
+                                    >Nama Lengkap</label
+                                >
+                                <input
+                                    class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 rounded-lg p-4 text-on-surface placeholder:text-outline-variant transition-all"
+                                    placeholder="Masukkan nama Anda"
+                                    type="text" />
+                            </div>
+                            <div class="space-y-2">
+                                <label
+                                    class="text-sm font-semibold uppercase tracking-widest text-on-surface-variant ml-2"
+                                    >Nomor WhatsApp</label
+                                >
+                                <div class="relative">
+                                    <span
+                                        class="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant font-semibold"
+                                        >+62</span
+                                    >
+                                    <input
+                                        class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 rounded-lg p-4 pl-14 text-on-surface placeholder:text-outline-variant transition-all"
+                                        placeholder="812-3456-7890"
+                                        type="tel" />
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label
+                                    class="text-sm font-semibold uppercase tracking-widest text-on-surface-variant ml-2"
+                                    >Pilih Cabang Momis</label
+                                >
+                                <select
+                                    class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 rounded-lg p-4 text-on-surface appearance-none transition-all">
+                                    <option>Momis Bakery - Sudirman Central</option>
+                                    <option>Momis Bakery - Dharmawangsa</option>
+                                    <option>Momis Bakery - Kemang Heritage</option>
+                                    <option>Momis Bakery - Menteng Kitchen</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <button
+                                class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-full py-5 px-8 font-bold text-lg flex items-center justify-center gap-3 shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all">
+                                <span class="material-symbols-outlined" data-weight="fill">chat</span>
+                                Kirim ke WhatsApp
+                            </button>
+                            <p class="text-center text-xs text-on-surface-variant mt-4 leading-relaxed">
+                                Pesanan Anda akan diteruskan langsung ke admin cabang yang dipilih melalui WhatsApp
+                                untuk proses pembayaran &amp; pengiriman.
+                            </p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-surface-container-high py-16 px-6 mt-20">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+                <div class="text-center md:text-left space-y-4">
+                    <h2 class="font-serif text-3xl text-primary">Golden Crust</h2>
+                    <p class="text-on-surface-variant text-sm max-w-xs">
+                        Menyajikan kehangatan dari dapur kami ke meja makan Anda setiap hari sejak 1988.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-12 text-sm">
+                    <div class="space-y-4">
+                        <p class="font-bold text-primary uppercase tracking-widest">Informasi</p>
+                        <ul class="space-y-2 text-on-surface-variant">
+                            <li><a class="hover:text-primary transition-colors" href="#">Tentang Kami</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Kebijakan Privasi</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Syarat &amp; Ketentuan</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <p class="font-bold text-primary uppercase tracking-widest">Layanan</p>
+                        <ul class="space-y-2 text-on-surface-variant">
+                            <li><a class="hover:text-primary transition-colors" href="#">Bantuan</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Pengiriman</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Katering</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4 col-span-2 sm:col-span-1">
+                        <p class="font-bold text-primary uppercase tracking-widest">Ikuti Kami</p>
+                        <div class="flex gap-4">
+                            <a
+                                class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all"
+                                href="#">
+                                <span class="material-symbols-outlined text-xl">group</span>
+                            </a>
+                            <a
+                                class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all"
+                                href="#">
+                                <span class="material-symbols-outlined text-xl">camera_alt</span>
+                            </a>
+                            <a
+                                class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all"
+                                href="#">
+                                <span class="material-symbols-outlined text-xl">video_call</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="max-w-7xl mx-auto border-t border-outline-variant/20 mt-16 pt-8 text-center text-xs text-on-surface-variant/60">
+                © 2024 Golden Crust Artisanal Bakery. Semua hak dilindungi undang-undang.
+            </div>
+        </footer>
+        <!-- Mobile Bottom Navigation -->
+        <nav
+            class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#fff8f2]/80 backdrop-blur-2xl z-50 rounded-t-[3rem] shadow-[0_-12px_40px_rgba(32,27,16,0.06)]">
+            <a class="flex flex-col items-center justify-center text-[#201b10]/50 p-2 hover:text-[#6c2f00]" href="#">
+                <span class="material-symbols-outlined" data-icon="home">home</span>
+                <span class="font-sans text-[11px] font-semibold uppercase tracking-widest mt-1">Beranda</span>
+            </a>
+            <a
+                class="flex flex-col items-center justify-center bg-gradient-to-br from-[#6c2f00] to-[#8b4513] text-white rounded-full p-3 mb-1 shadow-lg scale-90 active:squish duration-200"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+                <span class="font-sans text-[11px] font-semibold uppercase tracking-widest mt-1">Pesanan</span>
+            </a>
+            <a class="flex flex-col items-center justify-center text-[#201b10]/50 p-2 hover:text-[#6c2f00]" href="#">
+                <span class="material-symbols-outlined" data-icon="local_offer">local_offer</span>
+                <span class="font-sans text-[11px] font-semibold uppercase tracking-widest mt-1">Promo</span>
+            </a>
+            <a class="flex flex-col items-center justify-center text-[#201b10]/50 p-2 hover:text-[#6c2f00]" href="#">
+                <span class="material-symbols-outlined" data-icon="person">person</span>
+                <span class="font-sans text-[11px] font-semibold uppercase tracking-widest mt-1">Profil</span>
+            </a>
+        </nav>
+    </body>
+</html>

@@ -1,0 +1,472 @@
+<!doctype html>
+
+<html class="light" lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Momis Bakery - Roti Viral Terpopuler di Bandung</title>
+        <link rel="icon" type="image/png" href="logo.png">
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet" />
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "on-surface": "#201b10",
+                            "on-primary-container": "#ffc29f",
+                            "tertiary-container": "#585a47",
+                            "surface-container-low": "#fef2e0",
+                            "primary-container": "#8b4513",
+                            secondary: "#775a00",
+                            primary: "#6c2f00",
+                            "surface-container-lowest": "#ffffff",
+                            "inverse-primary": "#ffb68c",
+                            "surface-container": "#f8ecda",
+                            "tertiary-fixed-dim": "#c8c8b0",
+                            "on-secondary-container": "#6f5400",
+                            "on-secondary-fixed-variant": "#5a4300",
+                            surface: "#fff8f2",
+                            "primary-fixed": "#ffdbc9",
+                            "on-error-container": "#93000a",
+                            tertiary: "#414231",
+                            "secondary-fixed": "#ffdf99",
+                            "surface-variant": "#ede1cf",
+                            outline: "#877369",
+                            "secondary-fixed-dim": "#f3bf32",
+                            "on-primary": "#ffffff",
+                            "error-container": "#ffdad6",
+                            "surface-dim": "#e4d9c7",
+                            "inverse-on-surface": "#fbefdd",
+                            "on-tertiary-container": "#d1d1b9",
+                            "on-primary-fixed": "#321200",
+                            "on-tertiary-fixed": "#1b1d0e",
+                            "on-secondary-fixed": "#251a00",
+                            "surface-tint": "#934b19",
+                            "surface-container-highest": "#ede1cf",
+                            "surface-bright": "#fff8f2",
+                            "on-secondary": "#ffffff",
+                            background: "#fff8f2",
+                            "tertiary-fixed": "#e4e4cc",
+                            "on-background": "#201b10",
+                            error: "#ba1a1a",
+                            "surface-container-high": "#f2e7d5",
+                            "inverse-surface": "#363024",
+                            "primary-fixed-dim": "#ffb68c",
+                            "on-tertiary": "#ffffff",
+                            "secondary-container": "#fdc73b",
+                            "on-surface-variant": "#54433a",
+                            "outline-variant": "#dac2b6",
+                            "on-primary-fixed-variant": "#753401",
+                            "on-tertiary-fixed-variant": "#474836",
+                            "on-error": "#ffffff",
+                        },
+                        fontFamily: {
+                            headline: ["Noto Serif"],
+                            body: ["Plus Jakarta Sans"],
+                            label: ["Plus Jakarta Sans"],
+                        },
+                        borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" },
+                    },
+                },
+            };
+        </script>
+        <style>
+            body {
+                font-family: "Plus Jakarta Sans", sans-serif;
+                background-color: #fff8f2;
+                color: #201b10;
+            }
+            .font-serif {
+                font-family: "Noto Serif", serif;
+            }
+            .material-symbols-outlined {
+                font-variation-settings:
+                    "FILL" 0,
+                    "wght" 400,
+                    "GRAD" 0,
+                    "opsz" 24;
+            }
+            .glass-effect {
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+            }
+        </style>
+    </head>
+    <body
+        class="bg-background text-on-background antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+        <!-- TopNavBar -->
+        <nav
+            class="fixed top-0 w-full z-50 bg-orange-50/80 dark:bg-stone-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+            <div class="flex justify-between items-center px-8 py-4 w-full max-w-screen-2xl mx-auto">
+                <div class="text-2xl font-bold tracking-tight text-amber-900 dark:text-amber-500">Momis Bakery</div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a
+                        class="text-amber-700 dark:text-amber-400 font-semibold border-b-2 border-amber-700 dark:border-amber-400 pb-1"
+                        href="index.html"
+                        >Home</a
+                    >
+                    <a class="text-stone-600 dark:text-stone-400 hover:text-amber-800 transition-colors" href="menu.html"
+                        >Menu Favorit</a
+                    >
+                    <a class="text-stone-600 dark:text-stone-400 hover:text-amber-800 transition-colors" href="outlet.html"
+                        >Lokasi Cabang</a
+                    >
+                    <a class="text-stone-600 dark:text-stone-400 hover:text-amber-800 transition-colors" href="about.html"
+                        >Tentang Kami</a
+                    >
+                </div>
+                <div class="flex items-center space-x-4">
+                    <!-- <button class="text-stone-600 font-medium hover:scale-95 transition-transform duration-200" h>
+                        Pilih Cabang
+                    </button> -->
+                    <button
+                        class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-semibold hover:scale-95 transition-transform duration-200 shadow-lg shadow-primary/20">
+                        Pesan Sekarang
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <!-- Hero Section -->
+            <section class="relative h-screen w-full flex items-center overflow-hidden">
+                <div class="absolute inset-0 z-0">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent z-10"></div>
+                    <img
+                        class="w-full h-full object-cover"
+                        data-alt="Cinematic close-up of artisan bread being sliced, steam rising in warm golden morning light, soft focus bakery background"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg3UXRc6Pw1IchJst1knOKMVS7MJBrySHSr8R9FW33CaoNce75fWps-MtnJrbU92jICf8AnBpZNvlsUbv65-xIiubd7FW8yDplwh6TYCsrVV80zO0p0P1MBhNHHLf-nmQuSOqoxsX8awXtT504h6IM5hL_NHQuTUkCcSMcRwGW-1RqIL51U0KljTpVYxQ9jMBU4g4UI4TGdErByLI04G97akUeWBiGUGO8VHK90CCinJoqVJvTYEoKUfy7a0GC7W6rtXDaSnjfm-E" />
+                </div>
+                <div class="container mx-auto px-8 relative z-20 max-w-6xl">
+                    <div class="max-w-2xl space-y-6">
+                        <span
+                            class="inline-block bg-secondary-fixed text-on-secondary-fixed px-4 py-1.5 rounded-full text-sm font-bold tracking-widest uppercase"
+                            >Bakery Kebanggaan Bandung</span
+                        >
+                        <h1 class="text-6xl md:text-8xl font-headline font-bold text-primary leading-tight">
+                            Roti Viral <br /><span class="italic font-normal">Terpopuler</span> di Bandung
+                        </h1>
+                        <p class="text-xl text-on-surface-variant font-medium max-w-lg leading-relaxed">
+                            Nikmati sensasi kelembutan adonan artisanal yang dipanggang segar setiap jam. Cita rasa
+                            otentik yang membuat ribuan orang rela mengantre.
+                        </p>
+                        <div class="flex items-center space-x-6 pt-4">
+                            <button
+                                class="bg-primary hover:bg-primary-container text-on-primary px-10 py-5 rounded-full text-lg font-bold transition-all transform hover:scale-[0.98] shadow-xl shadow-primary/30">
+                                Pesan Sekarang
+                            </button>
+                            <button
+                                class="flex items-center space-x-3 text-primary font-bold hover:opacity-80 transition-opacity">
+                                <span
+                                    class="material-symbols-outlined scale-150"
+                                    data-icon="play_circle"
+                                    data-weight="fill"
+                                    >play_circle</span
+                                >
+                                <span>Lihat Proses Produksi</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Viral & Best Seller Section -->
+            <section class="py-24 bg-surface-container-low">
+                <div class="container mx-auto px-8 max-w-7xl">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 space-y-4">
+                        <div class="space-y-2">
+                            <h2 class="text-4xl md:text-5xl font-headline font-bold text-primary">
+                                Viral &amp; Best Seller
+                            </h2>
+                            <p class="text-on-surface-variant text-lg">
+                                Menu favorit yang selalu habis dalam hitungan jam.
+                            </p>
+                        </div>
+                        <a
+                            class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary-container transition-colors"
+                            href="#"
+                            >Lihat Semua Menu</a
+                        >
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Product Card 1 -->
+                        <div
+                            class="group bg-surface-container-lowest rounded-lg p-4 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                            <div class="relative overflow-hidden rounded-lg mb-6 aspect-square">
+                                <img
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Glistening Korean Sweet Potato Bread with purple dusting, soft and doughy texture, studio lighting on warm background"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA56u9GRUQ0_HVRnGrUuN3SgS35Ryv7rdo-8fC5LrZtFTfmxpxPzY7ktLeL8UyoSMHuzXtrwbGOvpQ490kcrue8mcf9Vo0CJAH9Cy6jQ9ZoZ31Nu2-Ov806GWkWhXBOphqFQMWNKQ_MgxirrQcm_99qZTFqJFCfCUEgD-iOtRfuuD_HJvkQiLVogPXaFFlboZix9354JPWJMrRtQAw4hY0lxYaySt2QkQWPNOSH4CgdVr0nh4z1HFR8tJItDBG0ET-fhmtyl8MCaGs" />
+                                <div
+                                    class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-full text-xs font-bold">
+                                    TERLARIS
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-on-surface mb-2">Korean Sweet Potato</h3>
+                            <p class="text-on-surface-variant text-sm mb-4 line-clamp-2 italic">
+                                Ubi madu panggang dibalut adonan kenyal yang lembut.
+                            </p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-primary font-bold text-lg">Rp 18.000</span>
+                                <button
+                                    class="bg-surface-container text-primary p-3 rounded-full hover:bg-primary hover:text-on-primary transition-all">
+                                    <span class="material-symbols-outlined" data-icon="shopping_basket"
+                                        >shopping_basket</span
+                                    >
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Product Card 2 -->
+                        <div
+                            class="group bg-surface-container-lowest rounded-lg p-4 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 lg:mt-8">
+                            <div class="relative overflow-hidden rounded-lg mb-6 aspect-square">
+                                <img
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Garlic Cream Cheese Bread with golden toasted butter coating and creamy cheese oozing from the center"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmiegCSfztzg6e90RT0QYkK92_5oe9V2oRTDKfdA_mD7ZA4PwZYVu1NK3KbbcF7NMFOnXQy-F8OsQLSH7U0zChckJ0f0wqrFbsUFuGAz10M9fbZgfxoscM5jAgQFc1oWQdNmnXHhaLhJMLl8HQ2D46P5SBsheBlPaS2h_hfvSr9Ity3ZNLDy5U4cPTksFr95NbtqVTz7ereEDp3cagPfYi-yvJb2ECZAZuFeUEZ4_s29ql6taQ5ai2T2zSKC1wG3cI78xdUNBwNJ0" />
+                            </div>
+                            <h3 class="text-xl font-bold text-on-surface mb-2">Garlic Cream Cheese</h3>
+                            <p class="text-on-surface-variant text-sm mb-4 line-clamp-2 italic">
+                                Roti mentega gurih dengan limpahan cream cheese premium.
+                            </p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-primary font-bold text-lg">Rp 22.000</span>
+                                <button
+                                    class="bg-surface-container text-primary p-3 rounded-full hover:bg-primary hover:text-on-primary transition-all">
+                                    <span class="material-symbols-outlined" data-icon="shopping_basket"
+                                        >shopping_basket</span
+                                    >
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Product Card 3 -->
+                        <div
+                            class="group bg-surface-container-lowest rounded-lg p-4 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                            <div class="relative overflow-hidden rounded-lg mb-6 aspect-square">
+                                <img
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Freshly baked butter croissants with golden flaky layers, arranged on a rustic linen cloth"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgh0ARRSM-QrbjPsgtVnUOMvQriaf6iSGOM9dN7zBPdfBrrgmTjknI7ZQtXCdrsxAul32XQxTyz5AltcuoKhphDenunarlN3bUVdfop8TgwnBW9GKbw4VuZBm9jaV4H1g94OdYXtcL0Mp7k3YTfIrUhe_Sn54rm1Gd72rcfhU1_T9JBrThOYjm1h8AAkB3TnuplwaT5ufmK-MmvjulQc-T8d3Q2AzGvnc5K0ilkKZKkxjEZmdEoOn5K-N6IfRK6zM9yk83tMYdxD8" />
+                                <div
+                                    class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">
+                                    VIRAL
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-on-surface mb-2">Momis Signature Croissant</h3>
+                            <p class="text-on-surface-variant text-sm mb-4 line-clamp-2 italic">
+                                100% French Butter untuk tekstur yang super flaky.
+                            </p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-primary font-bold text-lg">Rp 25.000</span>
+                                <button
+                                    class="bg-surface-container text-primary p-3 rounded-full hover:bg-primary hover:text-on-primary transition-all">
+                                    <span class="material-symbols-outlined" data-icon="shopping_basket"
+                                        >shopping_basket</span
+                                    >
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Product Card 4 -->
+                        <div
+                            class="group bg-surface-container-lowest rounded-lg p-4 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 lg:mt-8">
+                            <div class="relative overflow-hidden rounded-lg mb-6 aspect-square">
+                                <img
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Japanese Milk Bread loaf, ultra-soft and white, being pulled apart to show elastic dough fibers"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiDN6L0eeP4-Oso9sVtJ06NHADmXXJicblbrKGQWNvb4qWwLrmZ0Ju1niyuwzFWMQplSgYIQb7WUKaeCHiLkDzFk6Hz9GTLlyGCw0OqfOovD8YkTA5SfJAQRSa7WwiEf40uTPvK1gXOAN2AF2H7kCcUUkGh2jP8xHRb0Ab15nOvtC6ytnw-_KPn9CJi8PEt0VLHNkiOAXJm1KJ3I7i7cNZtDigguCnJvoUn0W6xE_tXtX2_YGw4XVo-F9s755ZMRE0piupeP8kU-c" />
+                            </div>
+                            <h3 class="text-xl font-bold text-on-surface mb-2">Japanese Milk Bread</h3>
+                            <p class="text-on-surface-variant text-sm mb-4 line-clamp-2 italic">
+                                Kelembutan legendaris yang meleleh di mulut.
+                            </p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-primary font-bold text-lg">Rp 35.000</span>
+                                <button
+                                    class="bg-surface-container text-primary p-3 rounded-full hover:bg-primary hover:text-on-primary transition-all">
+                                    <span class="material-symbols-outlined" data-icon="shopping_basket"
+                                        >shopping_basket</span
+                                    >
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Social Proof Section -->
+            <section class="py-24 bg-surface">
+                <div class="container mx-auto px-8 max-w-7xl">
+                    <div class="text-center max-w-2xl mx-auto mb-20 space-y-4">
+                        <h2 class="text-4xl font-headline font-bold text-primary italic">Dicintai Pecinta Roti</h2>
+                        <p class="text-on-surface-variant">
+                            Bergabunglah dengan ribuan #MomisLovers yang sudah merasakan kehangatan roti kami setiap
+                            harinya.
+                        </p>
+                    </div>
+                    <!-- Influencer Spotlight (Bento Style) -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                        <div
+                            class="md:col-span-2 bg-surface-container-high rounded-xl overflow-hidden flex flex-col md:flex-row">
+                            <div class="md:w-1/2 h-80 md:h-auto">
+                                <img
+                                    class="w-full h-full object-cover"
+                                    data-alt="Lifestyle photo of a food blogger enjoying a pastry in a sunlit modern cafe, aesthetic and warm tones"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg1I93-4yFfTQ3UWC7fitCot_jT2tLJaQOciqra9mlwYKPWttHW8bINb2O7USy4MmA2_giMJFPjqGsGIQqLpAAT78k09lNoYYRiuiR2D6tuGO8uCTLb6LFTixwXb3W7qClnh0EUfayqhqyfWSJpKmRp0Ll7dti_vL59aXuzktdR24B5dZljoGL2SAFQylWLc6Ditt9bRSDHUgV2TrBAN-UStY9DZid8Q6Ucua8OOrMim7vfMmOXUgHP2c8_HoAB9i95eHSEq-mdNM" />
+                            </div>
+                            <div class="md:w-1/2 p-10 flex flex-col justify-center">
+                                <div class="flex space-x-1 text-secondary-container mb-4">
+                                    <span
+                                        class="material-symbols-outlined"
+                                        style="font-variation-settings: &quot;FILL&quot; 1"
+                                        >star</span
+                                    >
+                                    <span
+                                        class="material-symbols-outlined"
+                                        style="font-variation-settings: &quot;FILL&quot; 1"
+                                        >star</span
+                                    >
+                                    <span
+                                        class="material-symbols-outlined"
+                                        style="font-variation-settings: &quot;FILL&quot; 1"
+                                        >star</span
+                                    >
+                                    <span
+                                        class="material-symbols-outlined"
+                                        style="font-variation-settings: &quot;FILL&quot; 1"
+                                        >star</span
+                                    >
+                                    <span
+                                        class="material-symbols-outlined"
+                                        style="font-variation-settings: &quot;FILL&quot; 1"
+                                        >star</span
+                                    >
+                                </div>
+                                <blockquote class="text-xl font-headline italic text-primary mb-6">
+                                    "Roti paling lembut yang pernah saya coba di Bandung. Korean Sweet Potato-nya
+                                    bener-bener game changer!"
+                                </blockquote>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 rounded-full bg-primary-container"></div>
+                                    <div>
+                                        <p class="font-bold text-on-surface">Tasya Farasya</p>
+                                        <p class="text-xs text-on-surface-variant tracking-wider uppercase font-bold">
+                                            Beauty &amp; Lifestyle Influencer
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-primary text-on-primary p-10 rounded-xl flex flex-col justify-center space-y-6">
+                            <div class="text-5xl font-headline font-bold">50k+</div>
+                            <p class="text-lg opacity-90 leading-relaxed">
+                                Followers di Instagram yang selalu menanti update panggangan terbaru kami.
+                            </p>
+                            <a
+                                class="flex items-center space-x-2 font-bold hover:translate-x-2 transition-transform"
+                                href="#">
+                                <span>Ikuti @momisbakery</span>
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Instagram Grid Mockup -->
+                    <div class="space-y-8">
+                        <div class="flex items-center space-x-4">
+                            <span class="material-symbols-outlined text-primary scale-125">camera_alt</span>
+                            <h3 class="text-xl font-bold tracking-tight">Instagram Live Feed</h3>
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                            <div class="aspect-square rounded-md overflow-hidden bg-surface-container">
+                                <img
+                                    class="w-full h-full object-cover hover:opacity-80 transition-opacity cursor-pointer"
+                                    data-alt="Instagram post showing artisan bread dough"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx4wAcpx94Lm8Vaxaz7XsHSyCDpRmY7YKhUW1SZNBUaoLVJQggt17KD7U0HYX_7oBQw-5XLRKtBz9KQpPFCw_qKbIFI9FXZqyt70Q7T7uqppzTnD5Oday--gYmlvNpK97FYWyRghkkb08thaOSfE2fwBKND-J835JlNwDqUZmS3WYXGq96_EZn2sx1j88h-QHgioNPXpf4dNH0aK6p3UFuvzGv6HwE0UmDl-pApHgI_fuBJPrPO-bw2ZtBnprlrqKSkyoaKVwzzdQ" />
+                            </div>
+                            <div class="aspect-square rounded-md overflow-hidden bg-surface-container">
+                                <img
+                                    class="w-full h-full object-cover hover:opacity-80 transition-opacity cursor-pointer"
+                                    data-alt="Instagram post of cupcakes"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuALQ_RshQxvFMrbpvkR6nmR-iyVt2313cRl5NM8SO0o4A_pDnknsHrV-fE40yVSydGn7Irknc0QxUFxsBVmTcweHJYf2iWoIhbHo0biPQ6Ixqfjtzk7pwAzjgaZRkLQtJKMm9lbhfKkDNXP9RfR9fPUkV-W8N8ke0RAxjkrlrVdGqRj98I28yGsvcg2uYp5Ghtbdd3oMToVYx8wbwRoVpbOM9NMWMLXaIZh7NZEv25tFNzulGaJ-oXYlYZn7nIRrTjHiEEGTqXLq34" />
+                            </div>
+                            <div class="aspect-square rounded-md overflow-hidden bg-surface-container">
+                                <img
+                                    class="w-full h-full object-cover hover:opacity-80 transition-opacity cursor-pointer"
+                                    data-alt="Instagram post of baked goods"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBZSjhKeQTTaHry-FPQyvOR1Qh8YDpbxIqr59c0-dH_FU9qErdcpdTPk6L6pLTvEs1IuAAgfQG_HB2-EIWR9xqf9D-2ww_MJCFrnmUaaWZGlXN2gw8iHCVOZo04TZtwpAfjPZCOR1Kl0SY_eUtcux0HjQWAB85rb0j7XHWF3rg0oFRVs9YLKShvl8PWH--P2Nk_dHb5_onvApwqcD5-6MaKZBu3B1ooym7wG9wlWdCY49XF12fsUiatMTmrcBo1K9jvu_wkQoGyOo" />
+                            </div>
+                            <div class="aspect-square rounded-md overflow-hidden bg-surface-container">
+                                <img
+                                    class="w-full h-full object-cover hover:opacity-80 transition-opacity cursor-pointer"
+                                    data-alt="Instagram post showing bread crust close-up"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL-NiAMQvyIwVYWD3oH8WSMsY7H3lJ_eupRWM29TQjnTdYwYI1ubXHOFHECC4ZkC3REmQHYtV7u5Kzg_9uJKnv77g1XPAO_7rXjdyDbD-NKU3zZadUvaT1KjAUbrmyYdDlgDTDLFn2UGJBiGO_tMV3r1liNNIG826RNSV6w81NcTXdTlsf_c90S2ICqJPQs9JIKPBP8Vvyp2tJEPjCMkD_GgNdgQ7JGJ0AceE03Q6ez66rpJwTBIH6zqklJIecO4z6IKYyqTXeiGk" />
+                            </div>
+                            <div class="aspect-square rounded-md overflow-hidden bg-surface-container">
+                                <img
+                                    class="w-full h-full object-cover hover:opacity-80 transition-opacity cursor-pointer"
+                                    data-alt="Instagram post of bakery interior"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9n6LZIzM2Z9U9D7UVx-x9xXQJrjkU0VZoYVrf3Nv4Gx3uSN-0vNkWdKltxa0QjLLwJ6QMKQ60vNyydXfNbNp5_oT2Wz5xox69DWK9zEQrZpcfF3Ki6Afb-Lfr0RDpOpSTJoVX4at6P5xfwdWOPM8RPPZ8YBe2XL4o6pXSm1qQgroF9kIc5DsIQVUkyGIy3acMLoskO2zXxsIfFNcWL39_i0YPrwmSBP5BVtQJC_c-wam6vei0TJcE43dYkjb8febJKUwC71GWGXE" />
+                            </div>
+                            <div class="aspect-square rounded-md overflow-hidden bg-surface-container">
+                                <img
+                                    class="w-full h-full object-cover hover:opacity-80 transition-opacity cursor-pointer"
+                                    data-alt="Instagram post of croissants"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMvoYW1vf9QClfo_jVv81Qa_RJoWjT6o7VjEL1KeCNeu-Sj9myUCjph6CerFfD_Fy0rFcgdJHEyDaYYfaTmmV94yGOZtMUb-71VDuy3_7liApR3G-HCrnRuhKpqhxIZsIEvd5e8yvUYPQYeWYLSkGHKJUg_SxKQZrYyDiKIy-zpCCDZxE0iuVHebNUzFHHl-MMl4jMr-a8TZoO8ir9OE2gfdvfljWNsxYLH2UF-WE7aBXKzRNf3p3hCcMco-TT3W3iemjO0PBjMJs" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- BottomNavBar -->
+        <!-- <div class="fixed bottom-8 left-0 w-full z-50 flex justify-center items-center">
+            <nav
+                class="bg-amber-900/90 dark:bg-stone-900/95 backdrop-blur-md text-orange-50 dark:text-amber-100 flex justify-around items-center rounded-full px-6 py-3 w-[90%] max-w-lg shadow-2xl shadow-amber-900/20">
+                <div
+                    class="flex flex-col items-center justify-center text-orange-50/70 hover:text-white transition-all cursor-pointer">
+                    <span class="material-symbols-outlined" data-icon="shopping_basket">shopping_basket</span>
+                    <span class="font-sans text-[10px] uppercase tracking-widest font-medium mt-1"
+                        >Ringkasan Pesanan</span
+                    >
+                </div>
+                <div
+                    class="flex flex-col items-center justify-center text-orange-50/70 hover:text-white transition-all cursor-pointer">
+                    <span class="material-symbols-outlined" data-icon="payments">payments</span>
+                    <span class="font-sans text-[10px] uppercase tracking-widest font-medium mt-1">Total: Rp 0</span>
+                </div>
+                <div class="flex flex-col items-center justify-center text-amber-200 cursor-pointer">
+                    <span class="material-symbols-outlined" data-icon="chat">chat</span>
+                    <span class="font-sans text-[10px] uppercase tracking-widest font-medium mt-1">Checkout WA</span>
+                </div>
+                <div
+                    class="flex flex-col items-center justify-center text-orange-50/70 hover:text-white transition-all cursor-pointer">
+                    <span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+                    <span class="font-sans text-[10px] uppercase tracking-widest font-medium mt-1">Bantuan</span>
+                </div>
+            </nav>
+        </div> -->
+        <!-- Footer -->
+        <footer
+            class="w-full py-12 px-8 bg-stone-100 dark:bg-stone-950 flex flex-col items-center justify-center text-center space-y-4">
+            <div class="bg-stone-200 dark:bg-stone-900 h-[1px] w-full mb-8"></div>
+            <div class="text-amber-900 font-bold text-2xl font-headline">Momis Bakery</div>
+            <div class="flex flex-wrap justify-center gap-8 mb-6">
+                <a class="text-stone-500 hover:text-amber-700 font-serif text-sm italic" href="#">Kebijakan Privasi</a>
+                <a class="text-stone-500 hover:text-amber-700 font-serif text-sm italic" href="#"
+                    >Syarat &amp; Ketentuan</a
+                >
+                <a class="text-stone-500 hover:text-amber-700 font-serif text-sm italic" href="#">Kontak Media</a>
+            </div>
+            <p class="font-serif text-sm italic text-stone-800 dark:text-stone-200">
+                © 2023 Momis Bakery. Dibuat dengan cinta.
+            </p>
+        </footer>
+    </body>
+</html>
